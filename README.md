@@ -4,3 +4,6 @@ Link to launch the web app
 
 ## Illustration: 
 ![](demo.png)
+
+## How to use
+![](how_to_use.png)
