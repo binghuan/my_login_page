@@ -50,37 +50,8 @@
   </style>
   <!-- Custom styles for this template -->
   <link href="./signin.css" rel="stylesheet">
-
-  <script>
-
-    function getParameterByName(name, url) {
-      if (!url) url = window.location.href;
-      name = name.replace(/[\[\]]/g, '\\$&');
-      let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
-
-    document.addEventListener("DOMContentLoaded", function (event) {
-
-      let statusImg = document.getElementById("status");
-      let token = getParameterByName("token");
-      let msg = document.getElementById("msg");
-      if (token != null) {
-        statusImg.src = "images/ok.svg";
-        msg.innerText = "Login Successfully!";
-        msg.style.color = "blue";
-      } else {
-        statusImg.src = "images/fail.svg";
-        msg.innerText = "Login Failed!";
-        msg.style.color = "red";
-      }
-
-    });
-
-  </script>
+  <script src="utils.js"></script>
+  <script src="result.js"></script>
 
 </head>
 
