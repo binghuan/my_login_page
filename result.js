@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         statusImg.src = "images/ok.svg";
         msg.innerText = "Login Successfully!";
         msg.style.color = "blue";
-        //setCookie("token", token);
+        setCookie("token", token);
     } else {
         statusImg.src = "images/fail.svg";
         msg.innerText = "Login Failed!";
