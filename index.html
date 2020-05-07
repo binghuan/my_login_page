@@ -59,16 +59,17 @@
     <img class="mb-4" src="./bootstrap-solid.png" alt="" width="128" height="128">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" name="account" id="inputEmail" class="form-control" placeholder="Email address" required=""
+    <input type="text" name="account" id="inputEmail" class="form-control" placeholder="Email address" required=""
       autofocus="">
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox" value="remember-me"> Remember me
+        <input id="checkbox_remember" type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button type="button" id="button_submit"
+            class="btn btn-lg btn-primary btn-block" >Sign in</button>
     <p class="mt-5 mb-3 text-muted">© 2020</p>
 
   </form>
