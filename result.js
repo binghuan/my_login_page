@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         statusImg.src = "images/ok.svg";
         
         msg.innerText = "Login Successfully!";
-        if(sessionStorage.forTokenUpdate == true) {
+        if(sessionStorage.forTokenUpdate == "true") {
             msg.innerText = "Token Updated!";
             sessionStorage.forTokenUpdate = false;
         } 
