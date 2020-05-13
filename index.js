@@ -9,10 +9,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let password = document.getElementById("inputPassword").value;
     let account = document.getElementById("inputEmail").value;
 
+    let actionUrl = getParameterByName("action");
+    console.log("action = ", actionUrl);
+    if (actionUrl != null) {
+        form.action = actionUrl;
+    }
+
+    let method = getParameterByName("method");
+    console.log("method = ", method);
+    if (method != null) {
+        form.method = method;
+    }
+
     console.log("isExpired:", isExpired, account, password);
-    if (isExpired && 
-            password != null && password.trim().length > 0 && 
-            account && account.trim().length > 0) {
+    if (isExpired &&
+        password != null && password.trim().length > 0 &&
+        account && account.trim().length > 0) {
 
         document.getElementById("progress_view").style.display = "inline-block";
         form.style.display = "none";
@@ -32,18 +44,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             clearInterval(timerId);
         }
     }, 100);
-
-    let actionUrl = getParameterByName("action");
-    console.log("action = ", actionUrl);
-    if (actionUrl != null) {
-        form.action = actionUrl;
-    }
-
-    let method = getParameterByName("method");
-    console.log("method = ", method);
-    if (method != null) {
-        form.method = method;
-    }
 
     document.getElementById("button_submit").addEventListener("click", () => {
         console.log(">> Submit");
