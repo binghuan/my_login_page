@@ -48,14 +48,33 @@
       }
     }
   </style>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
   <!-- Custom styles for this template -->
   <link href="./signin.css" rel="stylesheet">
   <script src="utils.js"></script>
   <script src="index.js"></script>
 </head>
 
-<body class="text-center">
-  <form id="form" class="form-signin">
+<body class="text-center" style="display: flex; flex-direction: column;">
+
+  <div id="progress_view" class="form-signin" style="display: none;">
+    <img id="status" class="mb-4" src="images/progress.gif" alt="" width="128" height="128">
+    <h1 id="msg" class="h3 mb-3 font-weight-normal" style="color: blue" src="">Refresh Token ...</h1>
+  </div>
+
+  <form id="form" class="form-signin" style="opacity: 0;">
     <img class="mb-4" src="./bootstrap-solid.png" alt="" width="128" height="128">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
@@ -68,8 +87,7 @@
         <input id="checkbox_remember" type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <button type="button" id="button_submit"
-            class="btn btn-lg btn-primary btn-block" >Sign in</button>
+    <button type="button" id="button_submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
     <p class="mt-5 mb-3 text-muted">© 2020</p>
 
   </form>
